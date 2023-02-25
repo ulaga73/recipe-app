@@ -1,0 +1,16 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aquamarine;
+    width: 30%;
+    height: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 30%;
+}
+.flex-item{
+    display: flex;
+    justify-content: center;
+}

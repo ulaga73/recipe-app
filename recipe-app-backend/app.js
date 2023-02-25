@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', false);
-const port = 8080;
+const port = 8080 || process.env.PORT;
 const cors = require("cors");
 const dbServer = require("./database/mongoose");
 const database = require("./database/database");
