@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 async function dbServer(){
-    await mongoose.connect("mongodb://localhost:27017/recipe");
+    await mongoose.connect("mongodb+srv://ulaganathan:ulaganathan@cluster0.cdalxgz.mongodb.net/?retryWrites=true&w=majority");
     console.log("Database is connected successfully...");
 }
 

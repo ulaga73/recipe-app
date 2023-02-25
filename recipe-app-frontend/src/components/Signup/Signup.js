@@ -14,7 +14,7 @@ const Signup = () => {
             return setError("*The password and confirm password should be equal");
         }else{
             setError("");
-            fetch("http://localhost:8080/api/user/signup",{
+            fetch("https://recipe-app-pxdf.onrender.com/api/user/signup",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

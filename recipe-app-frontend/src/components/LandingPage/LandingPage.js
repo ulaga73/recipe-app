@@ -7,7 +7,7 @@ const LandingPage = () => {
     const navigate = useNavigate();
     console.log(apiData);
     useEffect(() => {
-        fetch("http://localhost:8080/api/recipe").then(res => res.json()).then((data) => {
+        fetch("https://recipe-app-pxdf.onrender.com/api/recipe").then(res => res.json()).then((data) => {
             if(data.status){
                 setApiData(data.result);
             }

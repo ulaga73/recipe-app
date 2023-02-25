@@ -11,7 +11,7 @@ const Login = () => {
             e.preventDefault();
             const {email, password} = user;
             console.log(user);
-            fetch("http://localhost:8080/api/user/login", {
+            fetch("https://recipe-app-pxdf.onrender.com/api/user/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
