@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 import "./LandingPage.css";
 
 const LandingPage = () => {
@@ -7,7 +8,11 @@ const LandingPage = () => {
     const navigate = useNavigate();
     console.log(apiData);
     useEffect(() => {
-        fetch("https://recipe-app-pxdf.onrender.com/api/recipe").then(res => res.json()).then((data) => {
+        fetch("http://localhost:8080/api/recipe", {
+            headers: {
+                "Authorization": localStorage.getItem("token")
+            }
+        }).then(res => res.json()).then((data) => {
             if(data.status){
                 setApiData(data.result);
             }
@@ -15,10 +20,7 @@ const LandingPage = () => {
     }, [])
     return(
         <div className="home-container">
-            <div className="logo-contain" onClick={() => navigate("/home")}>
-                <span className="logo">Logo</span>
-                <span className="recipe-app">Recipe App</span>
-            </div>
+            <NavBar/>
             <div className="search-bar">
                 <input type={"search"} /> <br/>
                 <button onClick={() => navigate("/new")}>New</button>
@@ -30,7 +32,7 @@ const LandingPage = () => {
                     apiData.map((data, index) => {
                         return(
                             <div key={index} className="image-items">
-                                <img src={data.image.url} alt={data.title} width={300} height={500}/>
+                                <img src={data.image.url} alt={data.title} width={300} height={400}/>
                                 <p>{data.title}</p>
                             </div>
                         )

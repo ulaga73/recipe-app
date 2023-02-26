@@ -4,14 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [user, setUser] = useState({email: "", password: ""});
-    const [apiData, setApiData] = useState("");
     const navigate = useNavigate();
     function handleSubmit(e){
         if(user.email && user.password){
             e.preventDefault();
             const {email, password} = user;
             console.log(user);
-            fetch("https://recipe-app-pxdf.onrender.com/api/user/login", {
+            fetch("http://localhost:8080/api/user/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -19,7 +18,7 @@ const Login = () => {
                 body: JSON.stringify({email, password})
             }).then(res => res.json()).then((data) => {
                 if(data.status){
-                    setApiData(data);
+                    localStorage.setItem("token", data.token);
                     navigate("/home");
                 }
             })
@@ -34,11 +33,11 @@ const Login = () => {
                 <form>
                     <div>
                         <label htmlFor="email">Email address</label><br/>
-                        <input type="email" placeholder="Enter email" id="email" name="email" onChange={(e) => setUser({...user, email: e.target.value})} required/>
+                        <input type="email" placeholder="Enter email" id="email" name="email" onChange={(e) => setUser({...user, email: e.target.value})} required value={user.email}/>
                     </div>
                     <div>
                         <label htmlFor="password">Password</label><br/>
-                        <input type="password" placeholder="Enter password" id="password" name="password" onChange={(e) => setUser({...user, password: e.target.value})} required minLength={6} maxLength={12}/>
+                        <input type="password" placeholder="Enter password" id="password" name="password" onChange={(e) => setUser({...user, password: e.target.value})} required minLength={6} maxLength={12} value={user.password}/>
                     </div>
                     <div>
                         <input type="checkbox"/>

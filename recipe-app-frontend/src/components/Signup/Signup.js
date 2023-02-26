@@ -5,7 +5,6 @@ import "./Signup.css";
 const Signup = () => {
     const [user, setUser] = useState({email: "", password: "", cpassword: ""});
     const [error, setError] = useState("");
-    const [apiData, setApiData] = useState("");
     const navigate = useNavigate();
     function handleSubmit(e){
         e.preventDefault();
@@ -14,7 +13,7 @@ const Signup = () => {
             return setError("*The password and confirm password should be equal");
         }else{
             setError("");
-            fetch("https://recipe-app-pxdf.onrender.com/api/user/signup",{
+            fetch("http://localhost:8080/api/user/signup",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -22,7 +21,7 @@ const Signup = () => {
                 body: JSON.stringify({email, password})
             }).then(res => res.json()).then((data) => {
                 if(data.status){
-                    setApiData(data);
+                    localStorage.setItem("token", data.token);
                     navigate("/home");
                 }
             })
@@ -37,14 +36,14 @@ const Signup = () => {
                 <form>
                         <div>
                             <label htmlFor="email">Email address</label><br/>
-                            <input type="email" placeholder="Enter email" id="email" name="email" onChange={(e) => setUser({...user, email: e.target.value})} required/>
+                            <input type="email" placeholder="Enter email" id="email" name="email" onChange={(e) => setUser({...user, email: e.target.value})} required value={user.email}/>
                         </div>
                         <div>
                             <label htmlFor="password">Password</label><br/>
-                            <input type="password" placeholder="Enter password" id="password" name="password" onChange={(e) => setUser({...user, password: e.target.value})} required minLength={6} maxLength={12}/>
+                            <input type="password" placeholder="Enter password" id="password" name="password" onChange={(e) => setUser({...user, password: e.target.value})} required minLength={6} maxLength={12} value={user.password}/>
                         </div><div>
                             <label htmlFor="cpassword">Confirm password</label><br/>
-                            <input type="password" placeholder="Enter password" id="cpassword" name="cpassword" onChange={(e) => setUser({...user, cpassword: e.target.value})} required minLength={6} maxLength={12}/>
+                            <input type="password" placeholder="Enter password" id="cpassword" name="cpassword" onChange={(e) => setUser({...user, cpassword: e.target.value})} required minLength={6} maxLength={12} value={user.cpassword}/>
                         </div>
                         <button onClick={handleSubmit}>Submit</button>
                         <div>

@@ -1,0 +1,29 @@
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: crimson;
+    height: 3rem;
+    color: white;
+}
+.logo-contain{
+    font-size: 20px;
+    padding: 5px;
+    align-self: center;
+}
+.logo-contain:hover{
+    cursor: pointer;
+}
+.logo{
+    border: 1px solid;
+    padding: 5px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+.logout-btn{
+    height: 3rem;
+    width: 5rem;
+}
+.logout-btn:hover{
+    cursor: pointer;
+}

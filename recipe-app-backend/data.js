@@ -17,7 +17,8 @@ const data = [
         "vanilla extract",
         "chocolate chips"
       ],
-      "directions": "Preheat oven to 350°F. In a medium bowl, whisk together the flour, baking soda, and salt. In a separate large bowl, beat the butter, brown sugar, and granulated sugar until creamy. Add in the egg and vanilla extract and mix well. Gradually stir in the dry ingredients until well-combined. Fold in the chocolate chips. Drop the dough by rounded tablespoons onto a baking sheet and bake for 10-12 minutes, or until the edges are lightly golden. Cool on the baking sheet for a few minutes, then transfer to a wire rack to cool completely."
+      "directions": "Preheat oven to 350°F. In a medium bowl, whisk together the flour, baking soda, and salt. In a separate large bowl, beat the butter, brown sugar, and granulated sugar until creamy. Add in the egg and vanilla extract and mix well. Gradually stir in the dry ingredients until well-combined. Fold in the chocolate chips. Drop the dough by rounded tablespoons onto a baking sheet and bake for 10-12 minutes, or until the edges are lightly golden. Cool on the baking sheet for a few minutes, then transfer to a wire rack to cool completely.",
+      "user": "63faea499e8c848117eb7d3b"
     },
     {
       "title": "Samosa",
@@ -39,7 +40,8 @@ const data = [
         "garam masala powder",
         "amchur powder"
       ],
-      "directions": "In a large bowl, mix together the flour, vegetable oil, and salt until crumbly. Slowly add in the water, mixing until a dough forms. Cover the dough and let it rest for 30 minutes. In a separate pan, heat some oil and sauté the ginger and green chillies. Add in the mashed potatoes, green peas, and spices and mix well. Roll the dough into small circles, then cut in half. Fold the half circle into a cone and fill with the potato mixture. Seal the edges and fry in hot oil until golden brown."
+      "directions": "In a large bowl, mix together the flour, vegetable oil, and salt until crumbly. Slowly add in the water, mixing until a dough forms. Cover the dough and let it rest for 30 minutes. In a separate pan, heat some oil and sauté the ginger and green chillies. Add in the mashed potatoes, green peas, and spices and mix well. Roll the dough into small circles, then cut in half. Fold the half circle into a cone and fill with the potato mixture. Seal the edges and fry in hot oil until golden brown.",
+      "user": "63faea499e8c848117eb7d3b"
     },
     {
       "title": "Chicken Tikka Masala",
@@ -62,7 +64,8 @@ const data = [
         "tomato puree",
         "heavy cream"
       ],
-      "directions": "Cut the chicken into small pieces and marinate in a mixture of yogurt, lemon juice, ginger, garlic, and spices for at least 30 minutes. Thread the chicken onto skewers and grill until cooked through. In a separate pan, sauté some onion and garlic until soft. Add in the tomato puree and heavy cream and mix well. Add the grilled chicken to the pan and simmer until the sauce has thickened and the chicken is cooked through. Serve with rice and naan bread."
+      "directions": "Cut the chicken into small pieces and marinate in a mixture of yogurt, lemon juice, ginger, garlic, and spices for at least 30 minutes. Thread the chicken onto skewers and grill until cooked through. In a separate pan, sauté some onion and garlic until soft. Add in the tomato puree and heavy cream and mix well. Add the grilled chicken to the pan and simmer until the sauce has thickened and the chicken is cooked through. Serve with rice and naan bread.",
+      "user": "63faea499e8c848117eb7d3b"
     },
     {
       "title": "Gulab Jamun",
@@ -83,7 +86,8 @@ const data = [
         "saffron",
         "cardamom powder"
       ],
-      "directions": "In a large bowl, mix together the milk powder, flour, baking powder, and ghee. Slowly add in the milk, mixing until a dough forms. Knead the dough until smooth, then shape into small balls. In a separate pan, heat the sugar and water until the sugar has dissolved. Add in the rose water, saffron, and cardamom powder and mix well. Drop the dough balls into the syrup and simmer for 10-15 minutes, or until the balls have expanded and the syrup has thickened. Serve warm or at room temperature."
+      "directions": "In a large bowl, mix together the milk powder, flour, baking powder, and ghee. Slowly add in the milk, mixing until a dough forms. Knead the dough until smooth, then shape into small balls. In a separate pan, heat the sugar and water until the sugar has dissolved. Add in the rose water, saffron, and cardamom powder and mix well. Drop the dough balls into the syrup and simmer for 10-15 minutes, or until the balls have expanded and the syrup has thickened. Serve warm or at room temperature.",
+      "user": "63faea499e8c848117eb7d3b"
     }
 ]
 
