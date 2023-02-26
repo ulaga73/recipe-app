@@ -8,7 +8,7 @@ const LandingPage = () => {
     const navigate = useNavigate();
     console.log(apiData);
     useEffect(() => {
-        fetch("http://localhost:8080/api/recipe", {
+        fetch("https://recipe-app-pxdf.onrender.com/api/recipe", {
             headers: {
                 "Authorization": localStorage.getItem("token")
             }

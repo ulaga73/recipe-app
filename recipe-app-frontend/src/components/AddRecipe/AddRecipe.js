@@ -11,7 +11,7 @@ const AddRecipe = () => {
         // console.log(data);
         if(data.title && data.author && data.image && data.ingredients && data.directions){
             const {title, author, image, ingredients, directions} = data;
-            fetch("http://localhost:8080/api/recipe", {
+            fetch("https://recipe-app-pxdf.onrender.com/api/recipe", {
             method: "POST",
             headers: {
                 "Authorization": localStorage.getItem("token"),
